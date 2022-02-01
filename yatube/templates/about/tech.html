@@ -1,0 +1,45 @@
+<!-- templates/about/author.html -->
+{% extends "base.html" %}
+{% block title %}Technology{% endblock %}
+{% block content %}
+{% load user_filters %}
+  <main role="main" class="container">
+    <div class="row">
+      <!-- Левый вспомогательный блок -->
+      <div class="col-md-3 mb-3 mt-1">
+        <div class="card">
+          <div class="card-body">
+            <ul class="list-group list-group-flush">
+              <li class="list-group-item">
+                <div class="h3">
+                  Technology
+                </div> 
+              </li>
+              <li class="list-group-item">
+                <div class="h6 text-muted">
+                  Django 2.2.6 <br>
+                  Python 3.7.9 <br>
+                  еще debug_toolbar 3.2.1 прикрутил, но вы его не увидете
+                </div>
+              </li>
+            </ul>                                               
+          </div>                    
+        </div>                
+      </div>
+      <!-- Тело страницы -->
+      <div class="col-md-9">
+        <div class="card-body">                    
+          <div class="card-text">
+            <p>Этот сайт является результатом моего обучения на курсе Яндекс.Практикум за последние несколько месяцев.</p>
+            <p>При создании сего творения я использовал Python 3.7.9 (т.к. в 3.9 не проходят тесты хD) и Web framework Django 2.2.6
+              ибо я разработчик бекэнд и некогда мне рисовать красивые странички, да и разработчик я пока еще
+              посредственный, так что пользуюсь многими готовыми наработами Django =))</p>
+            <p>Тут всякие штуки есть типа комментариев и сообщений (даже картинки можно прикреплять оО).
+               Не стесняйтесь - регистрируйтесь и тыкайте по кнопкам =)
+            </p>
+          </div>                    
+        </div>                
+      </div>            
+    </div>        
+  </main>
+{% endblock %}

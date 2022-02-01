@@ -1,0 +1,51 @@
+<!-- templates/about/author.html -->
+{% extends "base.html" %}
+{% block title %}About Author{% endblock %}
+{% block content %}
+{% load user_filters %}
+  <main role="main" class="container">
+    <div class="row">
+      <!-- Левый вспомогательный блок -->
+      <div class="col-md-3 mb-3 mt-1">
+        <div class="card">
+          <div class="card-body">
+            <ul class="list-group list-group-flush">
+              <li class="list-group-item">
+                <div class="h3">
+                  Author
+                </div> 
+              </li>
+              <li class="list-group-item">
+                <div class="h6 text-muted">
+                  <p>Вот как-то так я выгляжу:</p>
+                  <img src="/media/author/author.jpg" width="190" height="230" >
+                </div>
+              <li class="list-group-item">
+                <div class="h6 text-muted">
+                  Профиль автора на Github:
+                  <a href=" https://github.com/Falken565" role="button">
+                    Falken565
+                  </a>
+                </div>
+              </li>
+            </ul>                                               
+          </div>                    
+        </div>                
+      </div>
+      <!-- Тело страницы -->
+      <div class="col-md-9">
+        <div class="card-body">                    
+          <div class="card-text">
+            <p>Всем здрасьте!</p>
+            <p>Зовут меня Сергей, и как видете, я решил заняться веб разработкой.</p>
+            <p>Со школы нравилось програмирование (не скажу, что прям увлекался, но интересно было), тогда же закончил какие-то простенькие курсы по Turbo Pascal или Basic? уже не упомню...
+              Но в итоге как-то не сложилось с IT областью и ушел я в инженеры строители, а дальше то одно то другое, то "ну раз начал надо доучиться", то "ну раз доучился надо и работать по специальности".
+              Замкнутый круг... Но идея (<span style="color:red">индея!</span> (с) Терри Пратчетт) то была и никуда эта идея не делась =))
+            </p>
+            <p>Вот микробложек, welcome!</p>
+          </div>                    
+        </div>                
+      </div>            
+    </div>        
+  </main>
+{% endblock %}

@@ -1,0 +1,17 @@
+<nav class="navbar navbar-light" style="background: linear-gradient(to left, #ff0000 0%, #660033 100%);">
+    <a class="navbar-brand" href="{%url 'index' %}"><span style="color:black">Darth</span><span style="color:red">Cookies</span></a>
+    <nav class="my-2 my-md-0 mr-md-3">
+        {% if user.is_authenticated %}
+        Пользователь: <a href="{%url 'profile' user.username %}" role="button">
+            @{{ user.username }}.
+          </a>
+        <a class="p-2 text-dark" href="{% url 'new_post' %}">Новая запись</a>
+        <a class="p-2 text-dark" href="{% url 'password_change' %}">Изменить пароль</a>
+        <a class="p-2 text-dark" href="{% url 'logout' %}">Выйти</a>
+        
+        {% else %}
+        <a class="p-2 text-dark" href="{% url 'login' %}">Войти</a> |
+        <a class="p-2 text-dark" href="{% url 'signup' %}">Регистрация</a>
+        {% endif %}
+    </nav>
+</nav>
